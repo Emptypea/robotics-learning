@@ -1,14 +1,39 @@
 #include <stdio.h>
-int main(void){
-    int num = 40731, sum = 0, len = 0, temp = num;
 
-    while (temp != 0) {
-        len++;
-        sum += temp % 10;
-        temp /= 10;
+int countDigits(int num) {
+    if(num == 0) {
+        return 1; // Special case for 0
     }
-    printf("Number: %d\n", num);
-    printf("Number of digits: %d\n", len);
-    printf("Sum of digits: %d\n", sum);
+    int count = 0;
+    while (num != 0) {
+        count++;
+        num /= 10;
+    }
+    return count;
+}
+
+int sumDigits(int num) {
+    int sum = 0;
+    while (num != 0) {
+        sum += num % 10;
+        num /= 10;
+    }
+    return sum;
+}
+
+
+int main(void){
+
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    int digitCount = countDigits(number);
+    int digitSum = sumDigits(number);
+
+    printf("Number of digits: %d\n", digitCount);
+    printf("Sum of digits: %d\n", digitSum);
+
     return 0;
+
 }
