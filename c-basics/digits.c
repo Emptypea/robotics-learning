@@ -26,9 +26,8 @@ int main(void){
 
     int number;
     printf("Enter a number: ");
-    int read = scanf("%d\n", &number);
+    int read = scanf("%d", &number);
     if(read != 1) {
-        //printf("Return value of scanf : %d\n", read);
         printf("Invalid input. Please enter an integer.\n");
         return 1; // Exit with error code
     }
