@@ -26,7 +26,12 @@ int main(void){
 
     int number;
     printf("Enter a number: ");
-    scanf("%d", &number);
+    int read = scanf("%d\n", &number);
+    if(read != 1) {
+        //printf("Return value of scanf : %d\n", read);
+        printf("Invalid input. Please enter an integer.\n");
+        return 1; // Exit with error code
+    }
 
     int digitCount = countDigits(number);
     int digitSum = sumDigits(number);
