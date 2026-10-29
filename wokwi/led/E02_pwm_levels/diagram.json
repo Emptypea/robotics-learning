@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": -147, "left": -64.4, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -143.4, "left": -192.6, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -32.4,
+      "left": 186.2,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -34.15,
+      "left": 142.6,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-logic-analyzer", "id": "logic1", "top": -249.25, "left": 288, "attrs": {} }
+  ],
+  "connections": [
+    [ "logic1:GND", "bb1:bn.28", "black", [ "h0" ] ],
+    [ "uno:GND.3", "bb1:bn.16", "black", [ "v28.7", "h167.2" ] ],
+    [ "bb1:20b.j", "bb1:bn.17", "black", [ "v19.2", "h19.2" ] ],
+    [ "uno:8", "bb1:tp.1", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:26b.f", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:20b.f", "", [ "$bb" ] ],
+    [ "led1:A", "bb1:27b.j", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:26b.j", "", [ "$bb" ] ],
+    [ "logic1:D4", "bb1:27b.f", "green", [ "h0" ] ],
+    [ "uno:6", "bb1:27b.f", "green", [ "v-67.2", "h205.3" ] ]
+  ],
+  "dependencies": {}
+}
