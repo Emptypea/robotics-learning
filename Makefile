@@ -12,6 +12,11 @@ bin/m1: c-basics/m1.c
 	mkdir -p bin
 	$(CC) $(CFLAGS) -o $@ $^
 
+bin/revbits: c-basics/revbits.c
+	mkdir -p bin
+	$(CC) $(CFLAGS) -o $@ $^
+
 clean:
 	rm -f bin/list_pp
 	rm -f bin/m1
+	rm -f bin/revbits
